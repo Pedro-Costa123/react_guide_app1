@@ -1,5 +1,5 @@
 import "./ExpenseDate.css";
-import { capitalizeFirstLetter } from "../myFunctions"; //My Added Stuff
+import { capitalizeFirstLetter } from "../helpers";
 
 function ExpenseDate(props) {
   const month = capitalizeFirstLetter(
