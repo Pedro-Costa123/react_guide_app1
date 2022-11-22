@@ -1,5 +1,7 @@
+import React from "react";
+
 import "./ExpenseDate.css";
-import { capitalizeFirstLetter } from "../helpers";
+import { capitalizeFirstLetter } from "../../helpers";
 
 function ExpenseDate(props) {
   const month = capitalizeFirstLetter(
