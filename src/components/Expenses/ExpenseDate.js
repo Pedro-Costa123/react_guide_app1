@@ -3,7 +3,7 @@ import React from "react";
 import "./ExpenseDate.css";
 import { capitalizeFirstLetter } from "../../helpers";
 
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
   const month = capitalizeFirstLetter(
     props.date.toLocaleString("pt-PT", { month: "long" })
   );
@@ -17,6 +17,6 @@ function ExpenseDate(props) {
       <div className="expense-date__day">{day}</div>
     </div>
   );
-}
+};
 
 export default ExpenseDate;

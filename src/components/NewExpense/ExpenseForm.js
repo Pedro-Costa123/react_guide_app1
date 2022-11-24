@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-function ExpenseForm(props) {
+const ExpenseForm = (props) => {
   //Individual States:
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -15,7 +15,7 @@ function ExpenseForm(props) {
   //     enteredDate: "",
   //   });
 
-  function titleChangeHandler(event) {
+  const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
 
     //Can give error because depends on previous state:
@@ -28,9 +28,9 @@ function ExpenseForm(props) {
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredTitle: event.target.value };
     // });
-  }
+  };
 
-  function amountChangeHandler(event) {
+  const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
     // setUserInput({
     //   ...userInput,
@@ -39,9 +39,9 @@ function ExpenseForm(props) {
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredAmount: event.target.value };
     // });
-  }
+  };
 
-  function dateChangeHandler(event) {
+  const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
     // setUserInput({
     //   ...userInput,
@@ -50,9 +50,9 @@ function ExpenseForm(props) {
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredDate: event.target.value };
     // });
-  }
+  };
 
-  function submitHandler(event) {
+  const submitHandler = (event) => {
     event.preventDefault();
 
     const expenseData = {
@@ -66,7 +66,7 @@ function ExpenseForm(props) {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
-  }
+  };
 
   return (
     <form onSubmit={submitHandler}>
@@ -105,6 +105,6 @@ function ExpenseForm(props) {
       </div>
     </form>
   );
-}
+};
 
 export default ExpenseForm;
